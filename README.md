@@ -27,10 +27,6 @@ To train the model using specific parameters:
 python train.py -e 25 -s 'g' -l 0.0001 -w 0.0000001 -d data/sample_train_data/ -p
 ```
 
-python video-prediction.py --video_path --output_path --save
-```
 ### Authors:
 - Le Dang Khoa
-- Le Gia Hung
-- Nguyen Hung Thinh
 
