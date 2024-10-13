@@ -132,7 +132,7 @@ def train_cpu(model, criterion, optimizer, scheduler, num_epochs, min_val_loss, 
         'test_acc': test_acc
     }
 
-    model_path = 'weight/xmodel_deepfake_sample_1.pth'
+    model_path = 'weight/xmodel_sample.pth'
     if os.path.exists(model_path):
         print("Loading saved model...")
         checkpoint = torch.load(model_path, map_location=torch.device('cpu'))
@@ -231,7 +231,7 @@ def train_cpu(model, criterion, optimizer, scheduler, num_epochs, min_val_loss, 
                     'state_dict': best_model_wts,
                     'optimizer': optimizer.state_dict(),
                     'min_loss': min_loss
-                }, 'weight/xmodel_deepfake_sample_1.pth')
+                }, 'weight/xmodel_sample.pth')
                 best_model_saved = True
 
     test_loss_value, test_acc_value = test(model, dataloaders, dataset_sizes, device, criterion)
@@ -246,7 +246,7 @@ def train_cpu(model, criterion, optimizer, scheduler, num_epochs, min_val_loss, 
 
     model.load_state_dict(best_model_wts)
 
-    with open('weight/xmodel_deepfake_sample_1.pkl', 'wb') as f:
+    with open('weight/xmodel_sample.pkl', 'wb') as f:
         pickle.dump([train_loss, train_accu, val_loss, val_accu], f)
 
     if not best_model_saved:
@@ -257,7 +257,7 @@ def train_cpu(model, criterion, optimizer, scheduler, num_epochs, min_val_loss, 
             'optimizer': optimizer.state_dict(),
             'min_loss': epoch_loss
         }
-        torch.save(final_state, 'weight/xmodel_deepfake_sample_1.pth')
+        torch.save(final_state, 'weight/xmodel_sample.pth')
 
     auc_score = calculate_auc(model, dataloaders, dataset_sizes)
     print('AUC:', auc_score)
@@ -324,7 +324,7 @@ def train_gpu(model, criterion, optimizer, scheduler, num_epochs, min_val_loss, 
         'test_acc': test_acc
     }
 
-    model_path = 'weight/xmodel_deepfake_sample_1.pth'
+    model_path = 'weight/xmodel_sample.pth'
     if os.path.exists(model_path):
         print("Loading saved model...")
         checkpoint = torch.load(model_path)
@@ -410,7 +410,7 @@ def train_gpu(model, criterion, optimizer, scheduler, num_epochs, min_val_loss, 
                     'state_dict': best_model_wts,
                     'optimizer': optimizer.state_dict(),
                     'min_loss': min_loss
-                }, 'weight/xmodel_deepfake_sample_1.pth')
+                }, 'weight/xmodel_sample.pth')
                 best_model_saved = True
 
         test_loss_value, test_acc_value = test(model, dataloaders, dataset_sizes, device, criterion)
@@ -436,7 +436,7 @@ def train_gpu(model, criterion, optimizer, scheduler, num_epochs, min_val_loss, 
             'optimizer': optimizer.state_dict(),
             'min_loss': epoch_loss
         }
-        torch.save(final_state, 'weight/xmodel_deepfake_sample_1.pth')
+        torch.save(final_state, 'weight/xmodel_sample.pth')
 
     auc_score = calculate_auc(model, dataloaders, dataset_sizes)
     print('AUC:', auc_score)
