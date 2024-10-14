@@ -1,4 +1,4 @@
-# XMT-Model
+# X-Model
 
 ## A Hybrid CNN-ViT Approach for Histopathological Breast Cancer Classification
 
