@@ -1,4 +1,4 @@
-# X-Model
+# X-Model Transformers
 
 ## A Hybrid CNN-ViT Approach for Histopathological Breast Cancer Classification
 
