@@ -2,6 +2,13 @@
 
 ## A Hybrid CNN-ViT Approach for Histopathological Breast Cancer Classification
 
+### Dataset (BreakHis)
+- Benign
+![collage-0](https://github.com/user-attachments/assets/99a5a00a-b393-45af-8e18-95bc9bc6c228)
+- Malignant
+![collage-1](https://github.com/user-attachments/assets/d10ea1ac-5a81-4b7b-ac2c-e30f69d4a85d)
+
+
 ### Requirements:
 
 - Pytorch >= 1.4
