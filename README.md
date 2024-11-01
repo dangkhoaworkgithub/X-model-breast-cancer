@@ -3,10 +3,29 @@
 ## A Hybrid CNN-ViT Approach for Histopathological Breast Cancer Classification
 
 ### Dataset (BreakHis)
-- Benign
-![collage-0](https://github.com/user-attachments/assets/99a5a00a-b393-45af-8e18-95bc9bc6c228)
-- Malignant
-![collage-1](https://github.com/user-attachments/assets/d10ea1ac-5a81-4b7b-ac2c-e30f69d4a85d)
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/99a5a00a-b393-45af-8e18-95bc9bc6c228" alt="Benign" width="200"/>
+      <p align="center">Benign</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/d10ea1ac-5a81-4b7b-ac2c-e30f69d4a85d" alt="Malignant" width="200"/>
+      <p align="center">Malignant</p>
+    </td>
+  </tr>
+</table>
+
+### Model Architecture
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/883be3e3-a5b9-4a1b-8477-cd3b66c81d41" alt="XModel Architecture" width="800"/>
+      <p>Model Architecture</p>
+    </td>
+  </tr>
+</table>
 
 
 ### Requirements:
